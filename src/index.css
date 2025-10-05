@@ -1,12 +1,36 @@
-@import "tailwindcss";
 /* yatra+one font */
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+/* jetBrains font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* overpass font */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+/* bitcount dot dot font */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap');
+/*Oswald  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import "tailwindcss";
 
 /* custom font */
 .yatraOne {
     font-family: "Yatra One", system-ui;
 }
 
+.jetBrains {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.overpass {
+    font-family: "Overpass", sans-serif;
+}
+
+.bitcount {
+    font-family: "Bitcount Prop Single Ink", system-ui;
+}
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+}
 
 /* navbar navLink css */
 .navbarClass {
@@ -14,33 +38,37 @@
     align-items: center;
     justify-items: center;
     gap: 4px;
+
 }
 
 /* banner btn css */
-.bannerBtn{
+.bannerBtn {
     background-color: #E6F3FF;
     padding: 4px 16px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 
 /* Custom Scrollbar Style */
 ::-webkit-scrollbar {
-  width: 8px; /* scrollbar er width */
+    width: 8px;
+    /* scrollbar er width */
 }
 
 /* scrollbar background (track) */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* background color */
+    background: #f1f1f1;
+    /* background color */
 }
 
 /* scrollbar thumb (scroll korar part) */
 ::-webkit-scrollbar-thumb {
-  background: #0062FF; /* change color here */
-  /* border-radius: 10px; round shape */
+    background: #0062FF;
+    /* change color here */
+    /* border-radius: 10px; round shape */
 }
 
 /* hover korle thumb color change hobe */
 ::-webkit-scrollbar-thumb:hover {
-  background: #e66f00;
+    background: #e66f00;
 }

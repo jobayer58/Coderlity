@@ -43,7 +43,7 @@ const Banner = () => {
                     {/* text */}
                     <div>
 
-                        <h1 className='text-6xl text-center font-bold leading-20'>Complete Digital Solutions  <br />for Your Business</h1>
+                        <h1 className='text-6xl text-center bitcount font-bold leading-20'>Complete Digital Solutions  <br />for Your Business</h1>
 
                     </div>
                     {/* icon2 */}
@@ -52,14 +52,14 @@ const Banner = () => {
                     </div>
                 </div>
                 {/* button */}
-                <div className='flex justify-center items-center gap-2 py-8'>
-                    <button className='bg-blue-900 text-white py-1 px-4 rounded-xl'>Web Application</button>
-                    <button className='bannerBtn'>Mobile Application</button>
-                    <button className='bannerBtn'>API Integration </button>
-                    <button className='bannerBtn'>Digital Marketing</button>
-                    <button className='bannerBtn'>UI/UX</button>
-                    <button className='bannerBtn'>Domain Hosting</button>
-                    <button className='bannerBtn'>Tech Consultency</button>
+                <div className='flex justify-center items-center gap-2 py-8 text-sm'>
+                    <button className='bg-blue-900 text-white py-1 px-4 rounded-lg jetBrains'>Web Application</button>
+                    <button className='bannerBtn jetBrains'>Mobile Application</button>
+                    <button className='bannerBtn jetBrains'>API Integration </button>
+                    <button className='bannerBtn jetBrains'>Digital Marketing</button>
+                    <button className='bannerBtn jetBrains'>UI/UX</button>
+                    <button className='bannerBtn jetBrains'>Domain Hosting</button>
+                    <button className='bannerBtn jetBrains'>Tech Consultency</button>
                 </div>
                 {/* button2 */}
                 <div className='flex justify-center items-center py-6 gap-40'>
@@ -67,15 +67,15 @@ const Banner = () => {
                         <img src={fluter} alt="" />
                     </div>
                     <div className='flex gap-3 bg-blue-50 p-2 rounded-md'>
-                        <button className='bg-black text-white py-2 px-4 rounded-lg flex justify-center items-center gap-2'><IoCall className='bg-blue-500 text-xl p-1 h-6 w-6 rounded-md' /> Book an intro Call</button>
-                        <button className='bg-white rounded-lg border py-1 px-4 font-semibold'>Explore Our Works</button>
+                        <button className='bg-black text-white py-2 overpass px-3 rounded-lg flex justify-center items-center gap-2'><IoCall className='bg-blue-500 text-xl p-1 h-6 w-6 rounded-md ' /> Book an intro Call</button>
+                        <button className='bg-white rounded-lg border py-1 px-4 font-semibold overpass'>Explore Our Works</button>
                     </div>
                     <div>
                         <img src={figma} alt="" />
                     </div>
                 </div>
                 {/* img */}
-                <div className='flex justify-center items-center gap-6'>
+                <div className='flex justify-center items-center gap-10'>
                     <img src={arabic1} alt="" />
                     <img src={arabic2} alt="" />
                 </div>

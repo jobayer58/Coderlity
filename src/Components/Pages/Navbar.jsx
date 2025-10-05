@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             {/* navigation */}
             <div>
-                <ul className='gap-3 flex font-semibold'>
+                <ul className='gap-3 flex font-semibold overpass'>
                     <Link>Home </Link>/
                     <Link className='navbarClass'>Services <MdKeyboardArrowDown /></Link>/
                     <Link className='navbarClass'>Products <MdKeyboardArrowDown /></Link>/
@@ -41,7 +41,7 @@ const Navbar = () => {
             {/* signup */}
             <div className='flex gap-5 justify-center items-center'>
                 <div>
-                    <button class="btn  relative inline-flex  items-center justify-center rounded-xl overflow-hidden font-medium transition-all bg-black gap-2 group py-2.5 px-5">
+                    <button class="btn overpass relative inline-flex  items-center justify-center rounded-xl overflow-hidden font-medium transition-all bg-black gap-2 group py-2.5 px-5">
                         <span class="w-56 h-48 rounded bg-[#0062FF] absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span><PiSignIn className='text-white text-2xl relative transition-colors duration-300 ease-in-out ' />
                         <span class="relative  w-full text-left text-white transition-colors duration-300 ease-in-out  font-semibold">My Account</span>
                     </button>
