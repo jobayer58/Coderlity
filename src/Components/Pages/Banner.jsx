@@ -10,6 +10,7 @@ import { IoCall } from 'react-icons/io5';
 import arabic1 from '../../assets/image 9.png'
 import arabic2 from '../../assets/Layer_1.png'
 import frame from '../../assets/Frame 1618873276.png'
+// import laravel from '../../assets/laravel.png'
 
 
 
@@ -42,9 +43,7 @@ const Banner = () => {
                     </div>
                     {/* text */}
                     <div>
-
-                        <h1 className='text-6xl text-center bitcount font-bold leading-20'>Complete Digital Solutions  <br />for Your Business</h1>
-
+                        <h1 className='text-6xl text-center bitcount font-bold leading-20'>Complete Digital Solutions  <br />for Your Business <span></span></h1>
                     </div>
                     {/* icon2 */}
                     <div>
@@ -54,12 +53,12 @@ const Banner = () => {
                 {/* button */}
                 <div className='flex justify-center items-center gap-2 py-8 text-sm'>
                     <button className='bg-blue-900 text-white py-1 px-4 rounded-lg jetBrains'>Web Application</button>
-                    <button className='bannerBtn jetBrains'>Mobile Application</button>
-                    <button className='bannerBtn jetBrains'>API Integration </button>
-                    <button className='bannerBtn jetBrains'>Digital Marketing</button>
-                    <button className='bannerBtn jetBrains'>UI/UX</button>
-                    <button className='bannerBtn jetBrains'>Domain Hosting</button>
-                    <button className='bannerBtn jetBrains'>Tech Consultency</button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>Mobile Application</button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>API Integration </button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>Digital Marketing</button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>UI/UX</button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>Domain Hosting</button>
+                    <button className='py-1 px-4 bg-blue-50 rounded-[8px] jetBrains'>Tech Consultency</button>
                 </div>
                 {/* button2 */}
                 <div className='flex justify-center items-center py-6 gap-40'>
