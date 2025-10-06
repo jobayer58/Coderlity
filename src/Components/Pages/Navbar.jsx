@@ -45,15 +45,6 @@ const Navbar = () => {
     },
   ];
 
-  const apps = [
-    { icon: <FaGoogle />, name: "Google" }, { icon: <FaEnvelope />, name: "Gmail" },
-    { icon: <FaCloud />, name: "Drive" }, { icon: <FaCalendarAlt />, name: "Calendar" },
-    { icon: <FaMapMarkedAlt />, name: "Maps" }, { icon: <FaFileAlt />, name: "Docs" },
-    { icon: <FaImages />, name: "Photos" }, { icon: <FaYoutube />, name: "YouTube" },
-    { icon: <FaPlay />, name: "Play" }, { icon: <FaNewspaper />, name: "News" },
-    { icon: <FaPhone />, name: "Phone" },
-  ];
-
   // Effects
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -90,7 +81,7 @@ const Navbar = () => {
             <button onMouseEnter={() => setIsServicesOpen(true)} className='flex items-center gap-1 hover:text-[#0062FF] transition-colors'>
               Services <MdKeyboardArrowDown />
             </button>
-            <div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className={`absolute top-full mt-8 w-[850px] bg-[#FFF8E7] rounded-md shadow-xl flex transition-all -translate-x-1/6 duration-300 ${isServicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
+            <div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className={`absolute top-full mt-6.5 w-[850px] bg-[#FFF8E7] rounded-md shadow-xl flex transition-all -translate-x-1/6 duration-300 ${isServicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
               {/* Services List */}
               <div className="w-1/3 bg-[#FFF3C4] rounded-l-md p-5 border-r">
                 {services.map((service, i) => (
@@ -136,12 +127,33 @@ const Navbar = () => {
             <span className="relative text-white font-semibold">My Account</span>
           </button>
           
+          {/* Apps Dropdown - Original Design */}
           <div className='relative apps-menu'>
-            <IoApps onClick={() => setIsAppsOpen(!isAppsOpen)} className='text-3xl text-gray-400 cursor-pointer hover:text-gray-600 transition' />
+            <IoApps
+              onClick={() => setIsAppsOpen(!isAppsOpen)}
+              className='text-3xl text-gray-400 cursor-pointer hover:text-gray-600 transition'
+            />
             {isAppsOpen && (
-              <div className='absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-lg border p-3 grid grid-cols-3 gap-4'>
-                {apps.map((app, i) => (
-                  <div key={i} className='flex flex-col items-center gap-1 hover:bg-gray-100 rounded-lg p-2 cursor-pointer transition'>
+              <div
+                className='absolute right-0 mt-6 w-64 bg-white rounded-2xl shadow-lg border p-3 grid grid-cols-3 gap-4 overflow-y-auto max-h-60'
+              >
+                {[
+                  { icon: <FaGoogle />, name: "Google" },
+                  { icon: <FaEnvelope />, name: "Gmail" },
+                  { icon: <FaCloud />, name: "Drive" },
+                  { icon: <FaCalendarAlt />, name: "Calendar" },
+                  { icon: <FaMapMarkedAlt />, name: "Maps" },
+                  { icon: <FaFileAlt />, name: "Docs" },
+                  { icon: <FaImages />, name: "Photos" },
+                  { icon: <FaYoutube />, name: "YouTube" },
+                  { icon: <FaPlay />, name: "Play" },
+                  { icon: <FaNewspaper />, name: "News" },
+                  { icon: <FaPhone />, name: "Phone" },
+                ].map((app, i) => (
+                  <div
+                    key={i}
+                    className='flex flex-col items-center justify-center gap-1 hover:bg-gray-100 rounded-lg p-2 cursor-pointer transition'
+                  >
                     <span className='text-2xl text-[#0062FF]'>{app.icon}</span>
                     <span className='text-xs font-medium text-gray-700'>{app.name}</span>
                   </div>
@@ -214,8 +226,20 @@ const Navbar = () => {
               <div className="mt-8">
                 <h3 className="font-semibold text-gray-800 mb-4">Apps</h3>
                 <div className="grid grid-cols-4 gap-3">
-                  {apps.slice(0, 8).map((app, i) => (
-                    <div key={i} className='flex flex-col items-center gap-1 hover:bg-gray-100 rounded-lg p-2 cursor-pointer transition'>
+                  {[
+                    { icon: <FaGoogle />, name: "Google" },
+                    { icon: <FaEnvelope />, name: "Gmail" },
+                    { icon: <FaCloud />, name: "Drive" },
+                    { icon: <FaCalendarAlt />, name: "Calendar" },
+                    { icon: <FaMapMarkedAlt />, name: "Maps" },
+                    { icon: <FaFileAlt />, name: "Docs" },
+                    { icon: <FaImages />, name: "Photos" },
+                    { icon: <FaYoutube />, name: "YouTube" },
+                  ].map((app, i) => (
+                    <div
+                      key={i}
+                      className='flex flex-col items-center justify-center gap-1 hover:bg-gray-100 rounded-lg p-2 cursor-pointer transition'
+                    >
                       <span className='text-xl text-[#0062FF]'>{app.icon}</span>
                       <span className='text-xs font-medium text-gray-700 text-center'>{app.name}</span>
                     </div>
