@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
     return (
         <section>
-            <div className='relative lg:h-[950px] py-8 lg:py-30' style={{
+            <div className='relative lg:h-[950px] py-16 lg:py-30' style={{
                 background: "linear-gradient(90deg, #D3EAFF 0%, #FFFFFF 50%, #D3EAFF 100%)"
             }}>
                 {/* 1st text - Responsive */}
@@ -23,11 +23,11 @@ const Banner = () => {
                     {/* icons - hidden on mobile, visible on tablet and desktop */}
                     <div className=''>
                         <motion.img
-                            animate={{ scale: [1, 1.2, 1] }}   // ছোট-বড়-ছোট হবে
+                            animate={{ scale: [1, 1.2, 1] }}   
                             transition={{
-                                duration: 3,   // এক cycle করতে সময়
-                                repeat: Infinity,  // বারবার চলবে
-                                ease: "easeInOut"  // মসৃণ effect
+                                duration: 3,   
+                                repeat: Infinity,  
+                                ease: "easeInOut"  
                             }}
                             src={mern} alt="" className="w-12 lg:w-auto left-0 absolute md:relative" />
                     </div>
@@ -38,11 +38,11 @@ const Banner = () => {
                     {/* icon2 - hidden on mobile, visible on tablet and desktop */}
                     <div className=''>
                         <motion.img
-                            animate={{ scale: [1, 1.2, 1] }}   // ছোট-বড়-ছোট হবে
+                            animate={{ scale: [1, 1.2, 1] }}  
                             transition={{
-                                duration: 3,   // এক cycle করতে সময়
-                                repeat: Infinity,  // বারবার চলবে
-                                ease: "easeInOut"  // মসৃণ effect
+                                duration: 3,   
+                                repeat: Infinity,  
+                                ease: "easeInOut"  
                             }}
                             src={marketing} alt="" className="w-12 lg:w-auto right-0 absolute md:relative" />
                     </div>
@@ -54,7 +54,7 @@ const Banner = () => {
                     <div className=''>
                         <motion.img
                             animate={{
-                                y: [0, -20, 0], // vertical movement
+                                y: [0, -20, 0], 
                             }}
                             transition={{
                                 duration: 4, repeat: Infinity, repeatType: "loop", ease: "easeInOut"
@@ -72,7 +72,7 @@ const Banner = () => {
                     <div className=''>
                         <motion.img
                             animate={{
-                                y: [0, -20, 0], // vertical movement
+                                y: [0, -20, 0], 
                             }}
                             transition={{
                                 duration: 4, repeat: Infinity, repeatType: "loop", ease: "easeInOut"
@@ -97,13 +97,13 @@ const Banner = () => {
                     {/* icons - hidden on mobile */}
                     <div className=''>
                         <motion.img
-                            animate={{ scale: [1, 1.2, 1] }}   // ছোট-বড়-ছোট হবে
+                            animate={{ scale: [1, 1.2, 1] }}   
                             transition={{
-                                duration: 3,   // এক cycle করতে সময়
-                                repeat: Infinity,  // বারবার চলবে
-                                ease: "easeInOut"  // মসৃণ effect
+                                duration: 3,   
+                                repeat: Infinity,  
+                                ease: "easeInOut"  
                             }}
-                            src={fluter} alt="" className="w-10 lg:w-auto md:left-0 left-3 md:top-0  top-88 absolute md:relative" />
+                            src={fluter} alt="" className="w-10 lg:w-auto md:left-0 left-3 md:top-0  top-86 absolute md:relative" />
                     </div>
                     <div className='flex flex-col sm:flex-row gap-3 bg-blue-50 p-2 rounded-md w-full max-w-md'>
                         <button className='bg-black text-white py-2 overpass px-3 rounded-lg flex justify-center items-center gap-2 text-sm lg:text-base'>
@@ -116,13 +116,13 @@ const Banner = () => {
                     </div>
                     <div className=''>
                         <motion.img
-                            animate={{ scale: [1, 1.2, 1] }}   // ছোট-বড়-ছোট হবে
+                            animate={{ scale: [1, 1.2, 1] }}  
                             transition={{
-                                duration: 3,   // এক cycle করতে সময়
-                                repeat: Infinity,  // বারবার চলবে
-                                ease: "easeInOut"  // মসৃণ effect
+                                duration: 3,   
+                                repeat: Infinity,  
+                                ease: "easeInOut"  
                             }}
-                            src={figma} alt="" className="w-10 lg:w-auto top-88 md:top-0 right-2 md:right-0 absolute md:relative" />
+                            src={figma} alt="" className="w-10 lg:w-auto top-86 md:top-0 right-2 md:right-0 absolute md:relative" />
                     </div>
                 </div>
 
