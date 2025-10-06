@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from '../../assets/web logo1 1 1.svg';
 import { Link } from 'react-router';
 import { PiSignIn } from 'react-icons/pi';
-import { MdKeyboardArrowDown, MdClose, MdMenu } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdClose, MdMenu, MdArrowBack } from 'react-icons/md';
 import { IoApps } from 'react-icons/io5';
 import { FaGoogle, FaYoutube, FaEnvelope, FaCloud, FaCalendarAlt, FaMapMarkedAlt, FaFileAlt, FaImages, FaPlay, FaNewspaper, FaPhone } from 'react-icons/fa';
 import icon from '../../assets/Vector (5).png';
@@ -14,6 +14,7 @@ const Navbar = () => {
   const [hoveredService, setHoveredService] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
 
   const services = [
     {
@@ -61,8 +62,20 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const toggleMobileDropdown = (itemName) => 
+  const toggleMobileDropdown = (itemName) => {
+    if (itemName === 'Services') {
+      setSelectedService(null);
+    }
     setActiveMobileDropdown(activeMobileDropdown === itemName ? null : itemName);
+  };
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+  };
+
+  const handleBackToServices = () => {
+    setSelectedService(null);
+  };
 
   return (
     <>
@@ -127,7 +140,7 @@ const Navbar = () => {
             <span className="relative text-white font-semibold">My Account</span>
           </button>
           
-          {/* Apps Dropdown - Original Design */}
+          {/* Apps Dropdown */}
           <div className='relative apps-menu'>
             <IoApps
               onClick={() => setIsAppsOpen(!isAppsOpen)}
@@ -190,16 +203,40 @@ const Navbar = () => {
                     Services <MdKeyboardArrowDown className={`transform transition-transform ${activeMobileDropdown === 'Services' ? 'rotate-180' : ''}`} />
                   </button>
                   {activeMobileDropdown === 'Services' && (
-                    <div className="pb-3 space-y-4">
-                      {services.map((service, i) => (
-                        <div key={i} className="bg-[#FFF8E7] rounded-lg p-4 border border-[#FFF3C4]">
-                          <div className="flex items-center gap-2 mb-2">
-                            <img src={icon} alt="icon" className="w-4 h-4" />
-                            <h4 className="font-semibold text-gray-800">{service.name}</h4>
+                    <div className="pb-3">
+                      {/* Service List View */}
+                      {!selectedService ? (
+                        <div className="space-y-3">
+                          <div className="bg-[#FFF3C4] rounded-lg p-4">
+                            {services.map((service, i) => (
+                              <div key={i} onClick={() => handleServiceClick(service)} className="p-3 rounded-lg cursor-pointer mb-2 transition-all hover:bg-[#FFF7D1]">
+                                <h3 className="font-semibold text-gray-800 flex items-center gap-2">
+                                  <img src={icon} alt="icon" className="w-4 h-4" /> {service.name}
+                                </h3>
+                                <p className="text-sm text-gray-600 ml-5 mt-1">{service.desc}</p>
+                              </div>
+                            ))}
                           </div>
-                          <p className="text-sm text-gray-600 mb-3">{service.desc}</p>
-                          <div className="space-y-2">
-                            {service.details.map((detail, idx) => (
+                        </div>
+                      ) : (
+                        /* Service Details View */
+                        <div className="bg-[#FFF8E7] rounded-lg p-4 border border-[#FFF3C4]">
+                          {/* Back Button */}
+                          <button onClick={handleBackToServices} className="flex items-center gap-2 text-[#0062FF] font-semibold mb-4">
+                            <MdArrowBack className="text-lg" />
+                            Back to Services
+                          </button>
+                          
+                          {/* Service Header */}
+                          <div className="flex items-center gap-2 mb-3">
+                            <img src={icon} alt="icon" className="w-4 h-4" />
+                            <h4 className="font-semibold text-gray-800">{selectedService.name}</h4>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-4">{selectedService.desc}</p>
+                          
+                          {/* Service Details */}
+                          <div className="space-y-3">
+                            {selectedService.details.map((detail, idx) => (
                               <div key={idx} className="bg-white rounded-lg p-3">
                                 <h5 className="font-medium text-gray-800 mb-1">{detail.title}</h5>
                                 <p className="text-sm text-gray-600">{detail.desc}</p>
@@ -207,7 +244,7 @@ const Navbar = () => {
                             ))}
                           </div>
                         </div>
-                      ))}
+                      )}
                     </div>
                   )}
                 </li>
