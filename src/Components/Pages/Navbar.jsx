@@ -168,7 +168,7 @@ const Navbar = () => {
                     {/* dropdown menu */}
                     {isAppsOpen && (
                         <div
-                            className='absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-lg border p-3 grid grid-cols-3 gap-4 overflow-y-auto max-h-60'
+                            className='absolute right-0 mt-7 w-64 bg-white rounded-2xl shadow-lg border p-3 grid grid-cols-3 gap-4 overflow-y-auto max-h-60'
                         >
                             {[
                                 { icon: <FaGoogle />, name: "Google" },
